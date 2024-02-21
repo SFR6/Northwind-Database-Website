@@ -1,0 +1,234 @@
+<check if="{{ @users_type == 0}} ">
+  <true>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-purple ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Create
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Read
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/categoryReadAll">Category</a></li>
+                <li><a class="dropdown-item" href="/productReadAllPage/1/NoFilter/NoOrder">Product</a></li>
+                <li><a class="dropdown-item disabled" href="/employeeReadAll">Employee</a></li>
+                <li><a class="dropdown-item disabled" href="/territoryReadAll">Employee Territories</a></li>
+                <li><a class="dropdown-item disabled" href="/customerReadAll">Customer</a></li>
+                <li><a class="dropdown-item disabled" href="/supplierReadAll">Supplier</a></li>
+                <li><a class="dropdown-item disabled" href="/shipperReadAll">Shipper</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Update
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Delete
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Employee Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/LogIn">Log In</a></li>
+                <li><a class="dropdown-item disabled" href="/LogOut">Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </true>
+</check>
+
+<check if="{{ @users_type == 1}} ">
+  <true>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-purple ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Create
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Read
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/categoryReadAll">Category</a></li>
+                <li><a class="dropdown-item" href="/productReadAllPage/1/NoFilter/NoOrder">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeReadAll">Employee</a></li>
+                <li><a class="dropdown-item " href="/territoryRead1">My Employee Territories</a></li>
+                <li><a class="dropdown-item disabled" href="/territoryReadAll">Employee Territories</a></li>
+                <li><a class="dropdown-item" href="/customerReadAll">Customer</a></li>
+                <li><a class="dropdown-item" href="/supplierReadAll">Supplier</a></li>
+                <li><a class="dropdown-item" href="/shipperReadAll">Shipper</a></li>
+                <li><a class="dropdown-item" href="/orderReadAllPageMy/1/NoFilter/NoOrder">My Orders</a></li>
+                <li><a class="dropdown-item disabled" href="/orderReadAllPage/1/NoFilter/NoOrder">All Orders</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Update
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="/productUpdateAll">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeUpdate1">My Employee</a></li>
+                <li><a class="dropdown-item disabled" href="/employeeUpdateAll">Employee</a></li>
+                <li><a class="dropdown-item disabled" href="/territoryUpdateAll">Territory</a></li>
+                <li><a class="dropdown-item disabled" href="/customerUpdateAll">Customer</a></li>
+                <li><a class="dropdown-item disabled" href="/supplierUpdateAll">Supplier</a></li>
+                <li><a class="dropdown-item disabled" href="/shipperUpdateAll">Shipper</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Delete
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Employee Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="/LogIn">Log In</a></li>
+                <li><a class="dropdown-item" href="/LogOut">Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </true>
+</check>
+
+<check if="{{ @users_type == 2}} ">
+  <true>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-purple ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Create
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/productCreate">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeCreate">Employee</a></li>
+                <li><a class="dropdown-item" href="/territoryCreate">Territory</a></li>
+                <li><a class="dropdown-item" href="/customerCreate">Customer</a></li>
+                <li><a class="dropdown-item" href="/supplierCreate">Supplier</a></li>
+                <li><a class="dropdown-item" href="/shipperCreate">Shipper</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Read
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/categoryReadAll">Category</a></li>
+                <li><a class="dropdown-item" href="/productReadAllPage/1/NoFilter/NoOrder">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeReadAll">Employee</a></li>
+                <li><a class="dropdown-item" href="/territoryRead1">My Employee Territories</a></li>
+                <li><a class="dropdown-item" href="/territoryReadAll">Employee Territories</a></li>
+                <li><a class="dropdown-item" href="/customerReadAll">Customer</a></li>
+                <li><a class="dropdown-item" href="/supplierReadAll">Supplier</a></li>
+                <li><a class="dropdown-item" href="/shipperReadAll">Shipper</a></li>
+                <li><a class="dropdown-item" href="/orderReadAllPageMy/1/NoFilter/NoOrder">My Orders</a></li>
+                <li><a class="dropdown-item" href="/orderReadAllPage/1/NoFilter/NoOrder">All Orders</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Update
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/productUpdateAll">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeUpdate1">My Employee</a></li>
+                <li><a class="dropdown-item" href="/employeeUpdateAll">Employee</a></li>
+                <li><a class="dropdown-item" href="/territoryUpdateAll">Territory</a></li>
+                <li><a class="dropdown-item" href="/customerUpdateAll">Customer</a></li>
+                <li><a class="dropdown-item" href="/supplierUpdateAll">Supplier</a></li>
+                <li><a class="dropdown-item" href="/shipperUpdateAll">Shipper</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Delete
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/productDeleteAll">Product</a></li>
+                <li><a class="dropdown-item" href="/employeeDeleteAll">Employee</a></li>
+                <li><a class="dropdown-item" href="/territoryDeleteAll">Territory</a></li>
+                <li><a class="dropdown-item" href="/customerDeleteAll">Customer</a></li>
+                <li><a class="dropdown-item" href="/supplierDeleteAll">Supplier</a></li>
+                <li><a class="dropdown-item" href="/shipperDeleteAll">Shipper</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Employee Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="/LogIn">Log In</a></li>
+                <li><a class="dropdown-item" href="/LogOut">Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </true>
+</check>

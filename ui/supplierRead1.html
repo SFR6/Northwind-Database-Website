@@ -1,0 +1,33 @@
+<div class="row content">
+    <div class="row">
+        <h2 class="text-center">Supplier <strong>{{ @supplier->CompanyName }}</strong></h2>
+    </div>
+    <div class="row">
+        Contact Person: {{ @supplier->ContactName }}, {{ @supplier->ContactTitle }}
+        <br>
+        Address: {{ @supplier->Address }}, {{ @supplier->City }}, {{ @supplier->PostalCode }}, {{ @supplier->Country }} ({{ @supplier->Region }})
+        <br>
+        Phone Number: {{ @supplier->Phone }}
+        <br>
+        Fax Number:
+        <check if="{{@supplier->Fax}}">
+            <true>
+                {{ @supplier->Fax }}
+            </true>
+            <false>
+                -
+            </false>
+        </check>
+        <br>
+        Website:
+        <check if="{{@supplier->HomePage}}">
+            <true>
+               <a href="{{ @website }}">{{ @websiteText }}</a>
+            </true>
+            <false>
+                -
+            </false>
+        </check>
+        <br>
+    </div>
+</div>

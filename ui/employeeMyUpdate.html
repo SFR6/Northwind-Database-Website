@@ -1,0 +1,47 @@
+<div class="row content px-2 py-2">
+  <div class="row">
+    <h2 class="text-center">Update Employee</h2>
+  </div>
+
+  <div class="row">
+    <check if="{{ @theErrorMessage != ''}}">
+      <true>
+        <div class="panel panel-default bg-warning text-white">
+          <div class="panel-body">
+            {{ @theErrorMessage }}
+          </div>
+        </div>
+      </true>
+    </check>
+  </div>
+  <div class="row">
+    <h2>{{ @myForm->TitleOfCourtesy }} {{ @myForm->FirstName }} {{ @myForm->LastName }}</h2>
+    <p>{{ @myForm->Title }}</p>
+
+    <check if="{{ @myForm->PhotoPath != ''}}">
+      <true>
+        <div class="col-sm-6">
+          <img src="/assets/{{ @myForm->PhotoPath }}" class="rounded w-100" width="500" height="333"
+            alt="{{ @myForm->FirstName }} {{ @myForm->LastName }}">
+        </div>
+      </true>
+      <false>
+        <p>No Photo Image</p>
+      </false>
+    </check>
+  </div>
+
+  <div class="row">
+    <form method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="picture">Picture:</label>
+        <input type="file" class="form-control" id="picture" name="picture" value="{{ @myForm->PhotoPath }}">
+      </div>
+      <div class="text-center py-3">
+        <input type="hidden" class="form-control" id="Id" name="Id" value="{{ @myForm->Id }}">
+        <input type="hidden" class="form-control" id="LastName" name="LastName" value="{{ @myForm->LastName }}">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

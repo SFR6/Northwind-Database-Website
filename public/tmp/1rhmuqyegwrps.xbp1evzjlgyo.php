@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title><?= ($html_title) ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    blockquote {
+      margin-left: 32px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid text-center pt-2 pb-1" style="background-color: rgb(164, 42, 42);">
+      <div class="row">
+        <div class="col-sm-2">
+          <img src="/images/northwindlogo.png" width="128" height="128" class="rounded" alt="Logo">
+        </div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-10">
+              <h2 class="font-bold center" style="color: white;">NorthWind</h2>
+            </div>
+            <div class="col-sm-2 float-right" style="color: white;">
+              <br> <?= ($users_name)."
+" ?>
+            </div>
+          </div>
+          <div class="row">
+            <?php echo $this->render('navi.html',NULL,get_defined_vars(),0); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-1 text-center" style="background-color: rgb(242, 255, 0);">
+        <br>
+        <a href="https://www.sqlite.org/"> SQLite </a>
+        <br><br><br>
+        <a href="https://php.net"> PHP </a>
+        <br><br><br>
+        <a href="https://fatfreeframework.com"> Fat Free Framework</a>
+      </div>
+      <div class="col-sm-10 px-4 py-2" style="background-color: rgb(0, 255, 225);">
+        <?php echo $this->render($content,NULL,get_defined_vars(),0); ?>
+      </div>
+      <div class="col-sm-1 text-center" style="background-color: rgb(242, 255, 0)">
+        <br>
+        <img src="/images/SQLite.png" class="rounded" alt="SQLite" width="64" height="64">
+        <br><br>
+        <img src="/images/PHP.png" class="rounded" alt="PHP" width="64" height="64">
+        <br><br>
+        <img src="/images/F3.png" class="rounded" alt="F3 Fat Free Framework" width="64" height="64">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid text-center pt-2 pb-1" style="background-color: rgb(33, 178, 55);">
+      <div class="row">
+        <div class="col-13">
+          <br><br>
+          <h5 class="font-italic text-justify" style="color: white;">©All rights reserved</h5>
+        </div>
+      </div>
+      <div>
+  </footer>
+</body>
+
+</html>

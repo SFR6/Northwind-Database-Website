@@ -1,0 +1,93 @@
+<div class="row content">
+    <div class="row">
+        <h2 class="text-center">NorthWind Products</h2>
+    </div>
+    <div class="row">
+        <div class="panel panel-default bg-success text-white">
+            <div class="panel-body py-2">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <a href="/filterProducts/{{@PARAMS.Page}}/{{@PARAMS.Filter}}/{{@PARAMS.Order}}"
+                            class="btn btn-primary">
+                            Filter </a>
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="/orderProducts/{{@PARAMS.Page}}/{{@PARAMS.Filter}}/{{@PARAMS.Order}}"
+                            class="btn btn-primary">
+                            Order </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <check if="{{ !@products}} ">
+            <true>
+                None
+            </true>
+            <false>
+                <repeat group="{{ @products }}" value="{{ @product }}">
+                    <a href="/productRead1/{{ @product->Id }}" class="list-group-item list-group-item-action">
+                        {{ @product->ProductName }}  (${{ @product->UnitPrice }})
+                    </a>
+                </repeat>
+            </false>
+        </check>
+    </div>
+
+    <div class="row">
+        <div class="panel panel-default bg-success text-white">
+            <div class="panel-body py-2">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <check if="{{ @crt_page != @first_page }}">
+                            <true>
+                                <a href="/productReadAllPage/{{ @first_page }}/{{ @PARAMS.Filter }}/{{ @PARAMS.Order }}"
+                                    class="btn btn-primary">
+                                    First
+                                </a>
+                            </true>
+                        </check>
+                    </div>
+                    <div class="col-sm-1">
+                        <check if="{{ @prev_page >= @first_page}} ">
+                            <true>
+                                <a href="/productReadAllPage/{{ @prev_page }}/{{ @PARAMS.Filter }}/{{ @PARAMS.Order }}"
+                                    class="btn btn-primary">
+                                    Prev
+                                </a>
+                            </true>
+                        </check>
+                    </div>
+                    <div class="col-sm-7 d-flex justify-content-center">
+                        <a href="/productReadAllPage/{{ @crt_page }}/{{ @PARAMS.Filter }}/{{ @PARAMS.Order }}"
+                            class="btn btn-primary">
+                            {{ @crt_page }} of {{ @last_page }}
+                        </a>
+                    </div>
+                    <div class="col-sm-1">
+                        <check if="{{ @next_page <= @last_page}} ">
+                            <true>
+                                <a href="/productReadAllPage/{{ @next_page }}/{{ @PARAMS.Filter }}/{{ @PARAMS.Order }}"
+                                    class="btn btn-primary">
+                                    Next
+                                </a>
+                            </true>
+                        </check>
+                    </div>
+                    <div class="col-sm-1">
+                        <check if="{{ @crt_page != @last_page }}">
+                            <true>
+                                <a href="/productReadAllPage/{{ @last_page }}/{{ @PARAMS.Filter }}/{{ @PARAMS.Order }}"
+                                    class="btn btn-primary">
+                                    Last
+                                </a>
+                            </true>
+                        </check>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
