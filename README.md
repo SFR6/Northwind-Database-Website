@@ -1,1 +1,2 @@
 # Northwind-Database-Website
+Hello. This is small website developed in PHP and the F3 Framework with the intent of managing the Northwind database. Users that visit the website can log in, and based on their credentials, there are two types of users: admins and non-admins. In short, non-admins have restricted access rights to some of the tables, while admins have unlimited acccess rights (can perform all CRUD operations) on all available tables.
